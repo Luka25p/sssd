@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    --main-fc:#dcdcdc;
+    --fc-gray:#989898;
+    --main-bg-dark:#230c33;
+    --main-bg-mid:#592E83;
+    --main-bg-light:#9984D4;
+    --main-bg-bright:#CAA8F5;
+    --main-bg-last:#B27C66;
+}
+.conteiner{
+    display: grid;
+    grid-template-areas: 
+    "nav nav"
+    "main main"
+    "footer footer";
+    grid-template-rows: 7vh 88vh 5vh;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--main-bg-dark);
+    align-items: center;
+    grid-area: nav;
+}
+nav a{
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--main-fc);
+}
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+nav ul li{
+    list-style: none;
+    font-size: 24px;
+    color: var(--main-fc);
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+nav button{
+    padding: 2px 5px 2px 5px;
+    font-size: 24px;
+    background-color: var(--main-bg-light);
+    border: none;
+    border-radius: 5px;
+}
+
+main{
+    grid-area: main;
+    background-color: var(--main-bg-mid);
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 400px;
+    grid-template-areas:
+    "i1 i1 i2"
+    "i3 i4 i2";
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.item1{
+    grid-area: i1;
+    background-color: var(--main-bg-last);
+    width: 100%;
+    height: 400px;
+}
+.item2{
+    grid-area: i2;
+    background-color: var(--main-bg-last);
+    width: 400px;
+    height: 100%;
+}
+.item3{
+    grid-area: i3;
+    background-color: var(--main-bg-last);
+    width: 400px;
+    height: 400px;
+}
+.item4{
+    grid-area: i4;
+    background-color: var(--main-bg-last);
+    width: 400px;
+    height: 400px;
+
+}
+.item5{
+    grid-area: i5;
+    background-color: var(--main-bg-last);
+    width: 400px;
+    height: 400px;
+}
+footer{
+    background-color: var(--main-bg-dark);
+    grid-area: footer;
+}
