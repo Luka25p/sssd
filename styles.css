@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scrollbar-color: var(--main-bg-mid) var(--main-bg-dark);
 }
+
 :root{
     --main-fc:#dcdcdc;
     --fc-gray:#989898;
@@ -10,7 +12,7 @@
     --main-bg-mid:#592E83;
     --main-bg-light:#9984D4;
     --main-bg-bright:#CAA8F5;
-    --main-bg-last:#B27C66;
+    --main-bg-last: rgb(201, 130, 0);
 }
 .conteiner{
     display: grid;
@@ -18,7 +20,7 @@
     "nav nav"
     "main main"
     "footer footer";
-    grid-template-rows: 7vh 88vh 5vh;
+    grid-template-rows: 7vh 100vh 5vh;
 }
 nav{
     display: flex;
@@ -31,6 +33,11 @@ nav a{
     text-decoration: none;
     font-size: 24px;
     color: var(--main-fc);
+    cursor: pointer;
+    transition: .2s linear;
+}
+nav a:hover{
+    scale: 1.2;
 }
 nav ul{
     display: flex;
@@ -43,6 +50,13 @@ nav ul li{
     position: relative;
     cursor: pointer;
     letter-spacing: 2px;
+    border: 2px solid transparent;
+    transition: 0.2s linear;
+}
+nav ul li:hover{
+    color: orange;
+    border-bottom: 2px solid orange;
+
 }
 nav button{
     padding: 2px 5px 2px 5px;
@@ -50,6 +64,10 @@ nav button{
     background-color: var(--main-bg-light);
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+nav button:hover{
+    opacity: 0.8;
 }
 
 main{
@@ -64,6 +82,7 @@ main{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding-top: 15px;
 }
 .item1{
     grid-area: i1;
